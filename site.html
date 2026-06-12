@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presente para Meu Amor</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+      color: #4b2c39;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -30px;
+      font-size: 24px;
+      animation: subir 10s linear infinite;
+      opacity: 0.5;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-duration: 9s; }
+    .heart:nth-child(2) { left: 25%; animation-duration: 12s; }
+    .heart:nth-child(3) { left: 45%; animation-duration: 10s; }
+    .heart:nth-child(4) { left: 65%; animation-duration: 13s; }
+    .heart:nth-child(5) { left: 85%; animation-duration: 11s; }
+
+    .card {
+      background: white;
+      max-width: 600px;
+      width: 100%;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      animation: aparecer 1.2s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: #c94f7c;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .vale {
+      margin: 24px 0;
+      padding: 20px;
+      border: 2px dashed #c94f7c;
+      border-radius: 16px;
+      background: #fff7fa;
+      font-weight: bold;
+      font-size: 1.2rem;
+      animation: brilho 2.5s ease-in-out infinite;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(30px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    @keyframes brilho {
+      0%, 100% { box-shadow: 0 0 0 rgba(201,79,124,0.0); }
+      50% { box-shadow: 0 0 20px rgba(201,79,124,0.25); }
+    }
+
+    @keyframes subir {
+      from { transform: translateY(0) scale(1); opacity: 0; }
+      10% { opacity: 0.5; }
+      to { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+  <div class="heart">❤</div>
+
+  <main class="card">
+    <h1>Feliz Dia dos Namorados ❤️</h1>
+    <p>Meu amor, este é um presente especial para você.</p>
+    <div class="vale">Você ganhou um vale-presente para ir à esteticista ✨</div>
+    <p>Espero que você aproveite esse momento para se cuidar e se sentir ainda mais linda.</p>
+    <p>Eu te amo muito!</p>
+  </main>
+</body>
+</html>
